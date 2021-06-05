@@ -14,7 +14,10 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    Ciao {{  Auth::user()->name }} :D
+                    <div class="">
+                      <a href="{{route('homepage')}}">Clicca qui ed Iniziamo l'esercizio</a>
+                    </div>
                 </div>
             </div>
         </div>
