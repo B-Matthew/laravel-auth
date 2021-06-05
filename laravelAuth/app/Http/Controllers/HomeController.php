@@ -44,8 +44,9 @@ class HomeController extends Controller
          'model' => 'required|string|min:1',
          'kw' => 'required|integer',
          'brand_id' => 'required|exists:App\Brand,id|integer',
-          'pilot_id.*' => 'required_if:current,1|distinct|exists:App\Pilot,id|integer'
+         'pilot_id.*' => 'required_if:current,1|distinct|integer'
        ]);
+       
        $car=Car::FindOrFail($id);
        $car -> update($validate);
 
